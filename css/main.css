@@ -1,0 +1,862 @@
+@charset "UTF-8";
+/* Portfolio page*/
+/* fonts */
+/* $font-face: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+helvetica neue, helvetica, Ubuntu, Roboto, noto, segoe ui, arial, sans-serif; */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 85px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.logo .begin {
+  color: #2196f3;
+}
+
+.logo .end {
+  color: #000000;
+}
+
+.logo .end-light {
+  color: #ffffff;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  outline: none;
+  color: #ffffff;
+  background-color: #2196f3;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+/* ANCHOR Шапка сайта */
+.page-header .container {
+  width: 1200px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav .item .current::after {
+  content: '';
+  width: auto;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  margin-top: 28px;
+  background-color: #2196f3;
+}
+
+.site .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-icon {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+  fill: #757575;
+}
+
+.address-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.link.current {
+  padding-bottom: 0px;
+}
+
+.link.contacts {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.link,
+.contacts {
+  font-weight: 500;
+  font-size: 14px;
+  /* line-height: 1.14; */
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav .link:hover,
+.nav .link:focus,
+.nav .link.current {
+  color: #2196f3;
+}
+
+.contacts {
+  color: #757575;
+}
+
+.contacts:hover, .contacts:focus {
+  color: #2196f3;
+}
+
+.contacts:hover .address-icon,
+.contacts:focus .address-icon {
+  fill: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ANCHOR Герой */
+.hero {
+  height: 600px;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/background/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.btn-order {
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  padding: 94px 0px;
+}
+
+/* ANCHOR Особенности */
+.feature {
+  padding-top: 94px;
+}
+
+.feature .item {
+  width: 270px;
+  background-color: white;
+}
+
+.feature .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature .container-icon {
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  background-color: #f5f4fa;
+}
+
+.feature .title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+.feature .desc {
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.feature .list,
+.section .list {
+  display: flex;
+  justify-content: center;
+}
+
+.what-we-do .title,
+.our-team .title,
+.customers .title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* ANCHOR Чем мы занимаемся */
+.what-we-do .caption {
+  padding: 27px;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.what-we-do .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.what-we-do .product {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.networks > .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.networks > .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.networks > .item:hover .network-icon,
+.networks .link:focus .network-icon {
+  fill: #ffffff;
+}
+
+.networks > .item:hover,
+.networks .link:focus {
+  background-color: #2196f3;
+}
+
+.networks > .item {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ANCHOR Наша команда */
+/* и часть Портфолио Все */
+.our-team {
+  background-color: #f5f4fa;
+}
+
+.our-team .item-member {
+  padding-bottom: 24px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
+}
+
+.our-team .item-member:not(:last-child) {
+  margin-right: 30px;
+}
+
+.item-member > .photo {
+  margin-bottom: 30px;
+}
+
+.item-member > .name {
+  margin-bottom: 10px;
+}
+
+.item-member > .occupation {
+  margin-bottom: 16px;
+}
+
+.our-team .network-icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.name,
+.list-all .project-name {
+  color: #212121;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.list-all .project-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.occupation,
+.list-all .project-type {
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.occupation {
+  text-align: center;
+}
+
+.list-all .project-type {
+  line-height: 1.88;
+}
+
+/* ANCHOR Постоянные клиенты */
+.customers .item {
+  width: 170px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customers .item:hover, .customers .item:focus {
+  cursor: pointer;
+  border-color: #2196f3;
+}
+
+.customers .item:hover .logo-icon,
+.customers .item:focus .logo-icon {
+  fill: #2196f3;
+}
+
+.customers .item .logo-icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ANCHOR Футер */
+.page-footer {
+  background-color: #2f303a;
+}
+
+.page-footer .container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+}
+
+.page-footer .address-container {
+  margin-top: 60px;
+  margin-right: 69px;
+  margin-bottom: 60px;
+}
+
+.page-footer .connect-container {
+  margin-top: 72px;
+  margin-right: 94px;
+  margin-bottom: 100px;
+}
+
+.page-footer .describe-container {
+  margin-top: 72px;
+  margin-bottom: 94px;
+  flex-grow: 1;
+}
+
+.page-footer .logo {
+  margin-bottom: 20px;
+}
+
+.page-footer .address,
+.page-footer .e-mail {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.page-footer .connect,
+.page-footer .describe {
+  margin-bottom: 20px;
+}
+
+.page-footer .form {
+  display: flex;
+}
+
+footer .address {
+  color: #ffffff;
+}
+
+footer .e-mail,
+footer .phone {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer .address,
+footer .e-mail,
+footer .phone {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.connect,
+.describe {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.page-footer .networks > .item {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page-footer .network-icon {
+  fill: #ffffff;
+}
+
+.networks > .item:hover, .networks > .item:focus {
+  background-color: #2196f3;
+}
+
+.email {
+  padding-left: 16px;
+  display: inline-block;
+  flex-grow: 1;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #2f303a;
+}
+
+.form .email {
+  margin-right: 12px;
+}
+
+.page-footer .btn {
+  padding-left: 28px;
+  padding-right: 28px;
+  border-radius: 4px;
+  border-color: transparent;
+  display: flex;
+  align-content: center;
+}
+
+.page-footer .btn > .text {
+  margin-right: 10px;
+}
+
+.btn .icon-send {
+  fill: #ffffff;
+}
+
+/* ANCHOR Portfolio page */
+.page-header.portfolio-nav .container {
+  border-bottom: 1px solid #ececec;
+}
+
+.portfolio {
+  padding: 94px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-nav {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-nav .item.item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background-color: #f5f4fa;
+}
+
+.filter-nav .filter-btn:hover,
+.filter-nav .filter-btn:focus,
+.filter-nav .filter-btn:active, .filter-btn.current {
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.filter-nav .filter-btn {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ANCHOR Все */
+.all-container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.portfolio .list-all {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio .list-all .item {
+  outline: 1px solid #eeeeee;
+}
+
+.list-all .item:nth-child(3n + 1),
+.list-all .item:nth-child(3n + 2) {
+  margin-right: 30px;
+}
+
+.list-all .item:nth-last-child(n + 4) {
+  margin-bottom: 30px;
+}
+
+.list-all .item:hover,
+.list-all .item:focus {
+  cursor: pointer;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.list-all .item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.description-container {
+  padding: 20px 24px;
+}
+
+.project-name {
+  margin-bottom: 4px;
+}
+
+.list-all .img-container {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
+.list-all .details {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(294px);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-all .item:hover .details {
+  transform: translateY(0px);
+}
+
+/* ANCHOR modal form */
+.title-form {
+  margin: 40px auto 30px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+  position: absolute;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 528px;
+  min-height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.input-container {
+  width: 448px;
+  height: 324px;
+  margin-bottom: 20px;
+}
+
+.field-form {
+  position: relative;
+}
+
+.field-form:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  font-family: inherit;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.placeholder-lbl {
+  position: absolute;
+  top: 12px;
+  left: 42px;
+  color: #757575;
+  cursor: pointer;
+}
+
+.comment .input {
+  height: 120px;
+}
+
+.comment .placeholder-lbl {
+  left: 16px;
+}
+
+.icon-form {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  width: 18px;
+  height: 18px;
+}
+
+.field-form:focus-within .icon-form {
+  fill: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus-within ~ .placeholder-lbl,
+.input:not(:placeholder-shown) ~ .placeholder-lbl {
+  transform: translate(-25px, -30px);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #2196f3;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input {
+  padding-left: 42px;
+}
+
+.txtarea {
+  padding: 16px 12px;
+  resize: none;
+}
+
+.comment .txtarea:focus-within ~ .placeholder-lbl,
+.comment .txtarea:not(:placeholder-shown) ~ .placeholder-lbl {
+  transform: translateY(-30px);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field-form-check {
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.policy-lbl::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url("../images/icon-empty.svg");
+  background-repeat: no-repeat;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked ~ .policy-lbl::before {
+  width: 16px;
+  height: 15px;
+  background-image: url("../images/icon-check.svg");
+  background-repeat: no-repeat;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:not(checked) ~ .policy-lbl::before {
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-container {
+  position: relative;
+}
+
+.submit.btn {
+  border: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.close-btn:hover .close-btn-svg,
+.close-btn:focus .close-btn-svg {
+  fill: #2196f3;
+}
+
+.close-btn-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*# sourceMappingURL=main.css.map */

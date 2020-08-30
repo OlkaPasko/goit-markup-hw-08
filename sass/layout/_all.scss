@@ -1,0 +1,82 @@
+/* ANCHOR Все */
+.all-container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.portfolio .list-all {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  .portfolio .list-all & {
+    outline: 1px solid $border-container;
+  }
+
+  .list-all &:nth-child(3n + 1),
+  .list-all &:nth-child(3n + 2) {
+    margin-right: 30px;
+  }
+
+  .list-all &:nth-last-child(n + 4) {
+    margin-bottom: 30px;
+  }
+
+  .list-all &:hover,
+  .list-all &:focus {
+    cursor: pointer;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+
+  .list-all & {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.description-container {
+  padding: 20px 24px;
+}
+
+.project-name {
+  margin-bottom: 4px;
+}
+
+.list-all .img-container {
+  position: relative;
+  width: 370px;
+  height: 294px;
+
+  overflow: hidden;
+}
+
+.details {
+  .list-all & {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    padding: 63px 24px;
+    width: 100%;
+    height: 100%;
+
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+
+    letter-spacing: 0.03em;
+
+    color: $btn-text-color;
+    background-color: $item-desc-bg;
+
+    transform: translateY(294px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .list-all .item:hover & {
+    transform: translateY(0px);
+  }
+}

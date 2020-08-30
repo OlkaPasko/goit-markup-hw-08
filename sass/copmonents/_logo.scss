@@ -1,0 +1,21 @@
+.logo {
+  display: inline-block;
+  margin-right: 85px;
+
+  font-family: $font-logo;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  .begin {
+    color: $accent-color;
+  }
+  .end {
+    color: #000000;
+  }
+  .end-light {
+    color: #ffffff;
+  }
+}

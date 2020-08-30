@@ -1,0 +1,29 @@
+/* ANCHOR Чем мы занимаемся */
+.what-we-do {
+  .caption {
+    padding: 27px;
+
+    color: #ffffff;
+    background-color: $caption-bg;
+  }
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .product {
+    position: relative;
+  }
+}
+.caption {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

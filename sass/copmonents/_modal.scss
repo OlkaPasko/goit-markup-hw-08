@@ -1,0 +1,211 @@
+/* ANCHOR modal form */
+.title-form {
+  margin: 40px auto 30px;
+
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+  position: absolute;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 528px;
+  min-height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.input-container {
+  width: 448px;
+  height: 324px;
+  margin-bottom: 20px;
+}
+
+.field-form {
+  position: relative;
+}
+
+.field-form:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+
+  font-family: inherit;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.placeholder-lbl {
+  position: absolute;
+  top: 12px;
+  left: 42px;
+  color: $contacts-color;
+  cursor: pointer;
+}
+
+.comment .input {
+  height: 120px;
+}
+
+.comment .placeholder-lbl {
+  left: 16px;
+}
+
+.icon-form {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  width: 18px;
+  height: 18px;
+}
+
+.field-form:focus-within .icon-form {
+  fill: $accent-color;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus-within ~ .placeholder-lbl,
+.input:not(:placeholder-shown) ~ .placeholder-lbl {
+  transform: translate(-25px, -30px);
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: $accent-color;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input {
+  padding-left: 42px;
+}
+
+.txtarea {
+  padding: 16px 12px;
+  resize: none;
+}
+
+.comment .txtarea:focus-within ~ .placeholder-lbl,
+.comment .txtarea:not(:placeholder-shown) ~ .placeholder-lbl {
+  transform: translateY(-30px);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field-form-check {
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.policy-lbl::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url('../images/icon-empty.svg');
+  background-repeat: no-repeat;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked ~ .policy-lbl::before {
+  width: 16px;
+  height: 15px;
+  background-image: url('../images/icon-check.svg');
+  background-repeat: no-repeat;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:not(checked) ~ .policy-lbl::before {
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-container {
+  position: relative;
+}
+
+.submit.btn {
+  border: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:hover .close-btn-svg,
+  &:focus .close-btn-svg {
+    fill: $accent-color;
+  }
+}
+
+.close-btn-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,130 @@
+/* ANCHOR Футер */
+.page-footer {
+  background-color: $footer-bg;
+
+  .container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+  }
+
+  .address-container {
+    margin-top: 60px;
+    margin-right: 69px;
+    margin-bottom: 60px;
+  }
+
+  .connect-container {
+    margin-top: 72px;
+    margin-right: 94px;
+    margin-bottom: 100px;
+  }
+
+  .describe-container {
+    margin-top: 72px;
+    margin-bottom: 94px;
+    flex-grow: 1;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .address,
+  .e-mail {
+    display: inline-block;
+    margin-bottom: 9px;
+  }
+
+  .connect,
+  .describe {
+    margin-bottom: 20px;
+  }
+
+  .form {
+    display: flex;
+  }
+}
+
+footer {
+  .address {
+    color: #ffffff;
+  }
+  .e-mail,
+  .phone {
+    color: $footer-contacts-color;
+  }
+  .address,
+  .e-mail,
+  .phone {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+}
+
+.connect,
+.describe {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.page-footer .networks > .item {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page-footer .network-icon {
+  fill: $social-icon-accent;
+}
+
+.networks > .item {
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.email {
+  padding-left: 16px;
+  display: inline-block;
+  flex-grow: 1;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background-color: $footer-bg;
+
+  .form & {
+    margin-right: 12px;
+  }
+}
+
+.btn {
+  .page-footer & {
+    padding-left: 28px;
+    padding-right: 28px;
+    border-radius: 4px;
+    border-color: transparent;
+
+    display: flex;
+    align-content: center;
+  }
+
+  .page-footer & > .text {
+    margin-right: 10px;
+  }
+
+  .icon-send {
+    fill: $btn-text-color;
+  }
+}

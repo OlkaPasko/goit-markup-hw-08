@@ -1,0 +1,110 @@
+/* ANCHOR Шапка сайта */
+.page-header {
+  .container {
+    width: 1200px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  .item .current::after {
+    content: '';
+    width: auto;
+    height: 4px;
+    border-radius: 2px;
+    display: block;
+    margin-top: 28px;
+
+    background-color: $accent-color;
+  }
+}
+
+.site {
+  .link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.contacts-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-icon {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+
+  fill: $contacts-color;
+}
+
+.address-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.link {
+  &.current {
+    padding-bottom: 0px;
+  }
+  &.contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.link,
+.contacts {
+  font-weight: 500;
+  font-size: 14px;
+  /* line-height: 1.14; */
+  letter-spacing: 0.02em;
+
+  color: $primary-text-color;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link {
+  .nav &:hover,
+  .nav &:focus,
+  .nav &.current {
+    color: $accent-color;
+  }
+}
+
+.contacts {
+  color: $contacts-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.address-icon {
+  .contacts:hover &,
+  .contacts:focus & {
+    fill: $accent-color;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

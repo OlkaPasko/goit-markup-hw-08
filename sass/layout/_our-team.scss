@@ -1,0 +1,71 @@
+/* ANCHOR Наша команда */ /* и часть Портфолио Все */
+.our-team {
+  background-color: $our-team-bg;
+}
+
+.item-member {
+  .our-team & {
+    padding-bottom: 24px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: #ffffff;
+  }
+
+  .our-team &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  > .photo {
+    margin-bottom: 30px;
+  }
+  > .name {
+    margin-bottom: 10px;
+  }
+  > .occupation {
+    margin-bottom: 16px;
+  }
+}
+
+.our-team .network-icon {
+  fill: $social-icon-color;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.name,
+.list-all .project-name {
+  color: $primary-text-color;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.list-all .project-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.occupation,
+.list-all .project-type {
+  color: $contacts-color;
+
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.occupation {
+  text-align: center;
+}
+
+.list-all .project-type {
+  line-height: 1.88;
+}
