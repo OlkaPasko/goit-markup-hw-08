@@ -19,46 +19,69 @@
     <!-- ANCHOR Шапка сайта -->
     <header class="page-header">
       <div class="container">
-        <nav class="nav">
-          <a class="logo" href="./index.html" lang="en"
-            ><span class="begin">Web</span><span class="end"> Studio</span></a
-          >
-          <ul class="site list">
-            <li class="item">
-              <a class="link current" href="./index.html">Студия</a>
-            </li>
-            <li class="item">
-              <a class="link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="item">
-              <a class="link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="contacts-list">
-          <ul class="list">
-            <li class="address-item">
-              <address>
-                <a class="link contacts" href="mailto:info@devstudio.com">
-                  <svg class="address-icon">
-                    <use href="./images/sprite.svg#envelope"></use>
-                  </svg>
-                  info@devstudio.com
-                </a>
-              </address>
-            </li>
-            <li class="address-item">
-              <address>
-                <a class="link contacts" href="tel:+380961111111">
-                  <svg class="address-icon">
-                    <use href="./images/sprite.svg#smartphone"></use>
-                  </svg>
-                  +38 096 111 11 11
-                </a>
-              </address>
-            </li>
-          </ul>
+        <a class="logo" href="./index.html" lang="en">
+          <span class="begin">Web</span><span class="end"> Studio</span>
+        </a>
+        <div class="menu-container" data-menu>
+          <nav class="nav">
+            <ul class="site list">
+              <li class="item">
+                <a class="link current" href="./index.html">Студия</a>
+              </li>
+              <li class="item">
+                <a class="link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="item">
+                <a class="link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts-list">
+            <ul class="list">
+              <li class="address-item">
+                <address>
+                  <a class="link contacts" href="mailto:info@devstudio.com">
+                    <svg class="address-icon">
+                      <use href="./images/sprite.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </address>
+              </li>
+              <li class="address-item">
+                <address>
+                  <a class="link contacts" href="tel:+380961111111">
+                    <svg class="address-icon">
+                      <use href="./images/sprite.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </address>
+              </li>
+            </ul>
+          </div>
         </div>
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="icon-menu"
+              href="./images/sprite-menu-mobile.svg#menu"
+            ></use>
+            <use
+              class="icon-cross"
+              href="./images/sprite-menu-mobile.svg#cross"
+            ></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -585,6 +608,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
 
     <script>
